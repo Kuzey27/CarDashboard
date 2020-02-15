@@ -254,4 +254,5 @@ def update_choro(choro_click, choro_figure):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    import os
+    app.run_server(debug=True or os.environ.get('DEBUG', 'False').lower() == 'true')
